@@ -1,19 +1,29 @@
-collections:
-  authors:
-    output: true
+# Site settings
+title: Charity Leak
+url: https://charity-leaks.github.io
+description: "Do you like good detective stories? Ever heard of Citizen Kane? Spotlight? All these movies where the journalist is the Hero? So come aboard, forget fiction but keep the popcorn and dive into the world of Rogue Offshore Financial industries where leaders, criminals, and celebrities rub shoulders together."
 
-defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#219ab3'
+
+# Footer settings
+footer: WangCorp
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/SBootstrap
+  - title: facebook
+    url:
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket
+    url: http://bitbucket.org/jekyll
+  - title: github
+    url: https://github.com/IronSummitMedia/startbootstrap
+
+# Build settings
+markdown: kramdown
+permalink: pretty
