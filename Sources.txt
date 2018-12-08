@@ -1,0 +1,4 @@
+Theme: https://github.com/jeromelachaud/grayscale-theme
+Favicon: https://www.favicon-generator.org/
+About image: https://www.icij.org/investigations/panama-papers/
+Intro image: https://www.history.com/news/was-there-really-a-red-telephone-hotline-during-the-cold-war
