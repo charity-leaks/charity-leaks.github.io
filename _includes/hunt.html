@@ -13,21 +13,25 @@
 					We decided to inspect these addresses for our matches and to compare them with the headquarters addresses of the corresponding charities that were found during the web scraping.
 					If the addresses match, there is a high probability that the offshore accounts do indeed belong to the real charity.<p>
 					<p>After extracting every nodes with a registered address corresponding to a match we obtained a list of 27 offshore entities. Among them, we discarded every match whose 
-					charity headquarter location was not filed in our data. We also removed the entities with an address registered in a Tax Heaven (Barbados, Aruba, Caraïb Islands) 
+					charity headquarter location was not available in our data. We also removed the entities with an address registered in a Tax Heaven (Barbados, Aruba, Caraïb Islands) 
 					when their corresponding charities were located in a different country.</p>
-					<p>We obtained 11 suspected matches (see below), a dataset small enough for manual inspection. Reading though, we kept only the entities where the countries off the two addresses matched. 
+					<p>We obtained 11 suspected matches (see below), a dataset small enough for manual inspection. Reading though, we kept only the entities where the countries of the two addresses matched. 
 					Some matches are more relevant than other since the town corresponds whereas for other we only have the country.</p>
 					
-					
-					CAPTURE
+					<div align="center">
+					<iframe src="../img/address_matches.html"
+					width="1200px"
+					height="440px"
+					></iframe>
+					</div>
 					
 					<p>In this final list, we found the names of famous charities such as Amnesty International, The Nature Conservancy, World Vision and The American Cancer Society. It is interesting to note that some charities 
-					come back two times in our list (The Nature Conservancy and Memorial Cancer Center) with different addresses. Each of these companies is therefore a suspect to us. Before searching the web for potential scandals, we proceeded to the second part of our analysis.</p>
-					<p>We searched the web for these companies associated with their specific leak source. It seems that the common good is not the main objective of every charity… Indeed, we found that The Nature Conservancy, one of the biggest environmental group was not using the donations for his environmental environment but for investing 
-					in oil drilling… : <a href="https://www.nbcwashington.com/investigations/Paradise-Papers-Secret-Documents-Reveal-Environmental-Groups-Invest-in-Oil-Drilling-482607881.html">Environmental Groups in-vest in Oil Driling</a> </p>
-					<p>Same for The Duke Endowment where we found that Duke university uses offshore founds to grow their endowments investing in fossil fuels : <a href=" https://www.theguardian.com/news/2017/nov/08/us-universities-offshore-funds-endowments-fossil-fuels-paradise-papers ">US universities use offshore funds to grow their huge endowmnens </a>
-					<p>These results show that our first investigation method was relevant : Sherlock would have been proud. We did not find any signs of fraud for the other member of our list but a lot of article on the appearance of Amnesty International in the leaks. In these articles, Amnesty International denied being implicated and denounced the use of his name. 
-					Despite these article or the lack of data on the implication of these charities, we choose to not put aside these suspect and to keep it in custody while proceeding to the second part of our analysis.</p>
+					come back two times in our list (The Nature Conservancy and Memorial Cancer Center) with different addresses. Each of these companies is therefore a suspect to us.</p>
+					<p>We searched the web for these companies associated with their specific leak source. It seems that the common good is not the main objective of every charity. Indeed, we found that The Nature Conservancy, one of the biggest environmental group was not using the donations for his environmental mission but for investing 
+					in oil drilling: <a href="https://www.nbcwashington.com/investigations/Paradise-Papers-Secret-Documents-Reveal-Environmental-Groups-Invest-in-Oil-Drilling-482607881.html"> Environmental Groups in-vest in Oil Driling</a>. </p>
+					<p>Same for The Duke Endowment where we found that Duke university uses offshore founds to grow their endowments investing in fossil fuels : <a href=" https://www.theguardian.com/news/2017/nov/08/us-universities-offshore-funds-endowments-fossil-fuels-paradise-papers ">US universities use offshore funds to grow their huge endowments</a>.
+					<p>These results show that our first investigation method was relevant: Sherlock would have been proud. We did not find any signs of fraud for the other member of our list but a lot of article on the appearance of Amnesty International in the leaks. In these articles, Amnesty International denied being implicated and denounced the use of his name. 
+					Despite these article or the lack of data on the implication of these charities, we choose to keep these suspects it in custody while proceeding to the second part of our analysis.</p>
 					<h4>In good or bad company ? </h4>
 					<p>We chose to evaluate the first-level connections of our matches in order to detect clusters. Indeed, intermediaries are crucial for an offshore service provider, handling the administration of the shell companies. If several suspected charities are all connected by a single intermediary,
 					it could mean that said intermediary is specialized in charities. But if one of the connected entities is clearly a fake, there is a high probability than its neighbours are fake too. In this case, it would mean that the given intermediary is in the habit of stealing charity names for its shell companies.</p>
@@ -43,7 +47,7 @@
 					
 					GRAPH PARADISE1
 					
-					<p> This graph is much too large for us to handle, so we filter it down, removing any non-charity nodes that are only connected to one other node (an therefore aren't connecting anyone).</p>
+					<p> This graph is much too large for us to handle (as my dick), so we filter it down, removing any non-charity nodes that are only connected to one other node (an therefore aren't connecting anyone).</p>
 					
 					GRAPH PARADISE2
 					
