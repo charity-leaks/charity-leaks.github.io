@@ -1,7 +1,7 @@
 function selectableForceDirectedGraph() {
-    var width = 960,
+    var width = 1600,
 
-    height = 960,
+    height = 1200,
     shiftKey, ctrlKey;
 
     var nodeGraph = null;
@@ -165,7 +165,7 @@ function selectableForceDirectedGraph() {
 
     }
 
-    d3.json("force.json", function(error, graph) {
+    d3.json("graphs/graph_paradise_small.json", function(error, graph) {
         nodeGraph = graph;
 
         graph.links.forEach(function(d) {
@@ -178,19 +178,35 @@ function selectableForceDirectedGraph() {
         .attr("y1", function(d) { return d.source.y; })
         .attr("x2", function(d) { return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
+		
+
 
 
         var force = d3.layout.force()
-        .charge(-120)
-        .linkDistance(20)
+        .charge(-600)
+        .linkDistance(100)
         .nodes(graph.nodes)
         .links(graph.links)
         .size([width, height])
         .start();
 
+		var myText = svg.selectAll(".mytext")
+		.data(graph.nodes)
+		.enter()
+		.append("text")
+		.text(node => node.label);
+		
+		node.append("title")
+        .text(function(d) { return d.name; });
+
+		myText.style("fill", "#0000ff")
+		.attr("width", "10")
+		.attr("height", "10")
+		.text(function(d) { return d.name; });
+		
         function dragstarted(d) {
             d3.event.sourceEvent.stopPropagation();
-            if (!d.selected && !shiftKey) {
+            if(!d.selected && !shiftKey) {
                 // if this node isn't selected, then we have to unselect every other node
                 node.classed("selected", function(p) { return p.selected =  p.previouslySelected = false; });
             }
@@ -215,11 +231,11 @@ function selectableForceDirectedGraph() {
         }
 		
         node = node.data(graph.nodes).enter().append("circle")
-        .attr("r", 4)
-		.attr("fill", function(d) { return d.match == true ? "red" : "grey";})
+        .attr("r", 10)
+		.attr("fill", function(d) { return d.match == true ? "red" : "green";})
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; })
-        .on("dblclick", function(d) { d3.event.stopPropagation(); })
+        .on("dblclick", null)
         .on("click", function(d) {
             if (d3.event.defaultPrevented) return;
 
@@ -249,6 +265,9 @@ function selectableForceDirectedGraph() {
 
                   node.attr('cx', function(d) { return d.x; })
                   .attr('cy', function(d) { return d.y; });
+				  
+				  myText.attr("x", function(d) { return d.x; })
+				  .attr("y", function(d) { return d.y; });
 
               };
 
@@ -282,7 +301,7 @@ function selectableForceDirectedGraph() {
             .on("touchmove.zoom", null)                                                                       
             .on("touchend.zoom", null);                                                                       
 
-            //svg_graph.on('zoom', null);                                                                     
+            svg_graph.on('zoom', null);                                                                     
             vis.selectAll('g.gnode')
             .on('mousedown.drag', null);
 
