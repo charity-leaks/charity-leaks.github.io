@@ -3,7 +3,48 @@
         <div class="hunt">
 			<div class="container">
 				<div class="col-lg-8 col-lg-offset-2">
-					<h2>Hands up! This is a charity!</h2>
+					<h2>Fishing for rich vilains</h2>
+					<p>So how can we now find out if an entity is an actual charity, and not some other shell corporation with a stolen name? </p>
+					<h4>Checking the directory...</h4>
+					<p>After investigating several methods, we finally chose to check the addresses of the matches we had. By definition, a shell company is a corporation that exists only on paper and has no office and no employees,
+					but may have a bank account, and also needs a mailbox address.
+					It could therefore be assumed that if a real charity’s headquarters match the mail address of a shell with the same name, these are indeed one and the same company.</p>
+					<p>In the database provided by ICIJ, the majority of the offshore entities have an address registered as a specific node (remember the database organization above). 
+					We decided to inspect these addresses for our matches and to compare them with the headquarters addresses of the corresponding charities that were found during the web scraping.
+					If the addresses match, there is a high probability that the offshore accounts do indeed belong to the real charity.<p>
+					<p>After extracting every nodes with a registered address corresponding to a match we obtained a list of 27 offshore entities. Among them, we discarded every match whose 
+					charity headquarter location was not filed in our data. We also removed the entities with an address registered in a Tax Heaven (Barbados, Aruba, Caraïb Islands) 
+					when their corresponding charities were located in a different country.</p>
+					<p>We obtained 11 suspected matches (see below), a dataset small enough for manual inspection. Reading though, we kept only the entities where the countries off the two addresses matched. 
+					Some matches are more relevant than other since the town corresponds whereas for other we only have the country.</p>
+					
+					
+					CAPTURE
+					
+					<p>In this final list, we found the names of famous charities such as Amnesty International, The Nature Conservancy, World Vision and The American Cancer Society. It is interesting to note that some charities 
+					come back two times in our list (The Nature Conservancy and Memorial Cancer Center) with different addresses. Each of these companies is therefore a suspect to us. Before searching the web for potential scandals, we proceeded to the second part of our analysis.</p>
+					<p>We searched the web for these companies associated with their specific leak source. It seems that the common good is not the main objective of every charity… Indeed, we found that The Nature Conservancy, one of the biggest environmental group was not using the donations for his environ-mental environment but fo investing 
+					in oil drilling… : <a href="https://www.nbcwashington.com/investigations/Paradise-Papers-Secret-Documents-Reveal-Environmental-Groups-Invest-in-Oil-Drilling-482607881.html">Environmental Groups in-vest in Oil Driling</a> </p>
+					<p>Same for The Duke Endowment where we found that Duke university uses offshore founds to grow their endowments investing in fossil fuels : <a href=" https://www.theguardian.com/news/2017/nov/08/us-universities-offshore-funds-endowments-fossil-fuels-paradise-papers ">US universities use offshore funds to grow their huge endowmnens </a>
+					<p>These results show that our first investigation method was relevant : Sherlock would have been proud. We did not find any signs of fraud for the other member of our list but a lot of article on the appearance of Amnesty International in the leaks. In these articles, Amnesty International denied being implicated and denounced the use of his name. 
+					Despite these article or the lack of data on the implication of these charities, we choose to not put aside these suspect and to keep it in custody while proceeding to the second part of our analysis.</p>
+					<h4>In good or bad company ? </h4>
+					<p>We chose to evaluate the first-level connections of our matches in order to detect clusters. Indeed, intermediaries are crucial for an offshore service provider, handling the administration of the shell companies. If several suspected charities are all connected by a single intermediary,
+					it could mean that said intermediary is specialized in charities. But if one of the connected entities is clearly a fake, there is a high probability than its neighbours are fake too. In this case, it would mean that the given intermediary is in the habit of stealing charity names for its shell companies.</p>
+					<p>To get these graphs, we extracted every node corresponding to a matched entity and its associated edges. The actors at the other end of these edges were extracted as well. 
+					With these data we could represent the first level connections for every entity in a form of a network and see the degree of interconnectivity between the matches. </p>
+					
+
+					
+					GRAPH PANAMA
+					
+					<p>This graph is already very interesting to look at. About half of all the charity nodes (in yellow) are somehow connected to another charity node, which is a lot for a dataset containing over 200'000 nodes. This confirms our suspicions from above that there must be intermediaries who either specialize in charities
+					, or are in the habit of using their names. A closer look shows us some familiar names, such as the World Wildlife Fund and UNICEF, con-nected through the Tarbes Trust.</p>
+					
+					GRAPH PARADISE
+					
+					<p>
+					
 				</div>
 			</div>
 		</div>
