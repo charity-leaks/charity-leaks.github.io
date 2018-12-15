@@ -276,10 +276,6 @@ a:focus {
     color: #fff;
     background: url(/img/fishing.jpg) no-repeat bottom center scroll;
     background-color: {{ site.color.primary-dark }};
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 
 }
 
