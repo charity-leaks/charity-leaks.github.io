@@ -4,16 +4,16 @@
 			<div class="container">
 				<div class="col-lg-8 col-lg-offset-2">
 					<h2>One Dataset to rule them all.</h2>
-					<p>The databases released by ICJC contain information on:</p>
+					<p>The <a href="https://offshoreleaks.icij.org/pages/about">databases</a> released by ICJC contain information on:</p>
 					
 					<ul style="text-align:justify;margin-bottom:2em">
 					<li><b>The Offshore Leaks</b>: 130 000 offshore accounts disclosed in a report (2013).</li>
-					<li><b>The Panamas Papers</b>: 214 000 offshore accounts from <i>Monssack Fonseca</i>, as presented above (2016)</li>
+					<li><b>The Panamas Papers</b>: 214 000 offshore accounts from <i>Mossack Fonseca</i>, as presented above (2016)</li>
 					<li><b>The Bahamas Leaks</b>: 1.3 million internal files from the company register of the Bahamas (2016)</li>
 					<li><b>The Paradise Papers</b>: 13.4 millions electronic documents relating to offshore investments (2017)</li>
 					</ul>
 					
-					<p>This database is powered by <i>Neo4j</i>, a graph database that structures data in nodes and relationships. The data were downloaded as several CSV files, one for each actor and one for the link between them. The different nodes represent:</p>
+					<p>This database is powered by <i>Neo4j</i>, a graph database that structures data in nodes and relationships. The <a href="https://offshoreleaks.icij.org/pages/faq#terms_definition">data</a> were downloaded as several CSV files, one for each actor and one for the link between them. The different nodes represent:</p>
 					
 					<ul style="text-align:justify;margin-bottom:2em">
 					<li><b>The offshore entity</b>: a company created in a low-tax jurisdiction that often attracts non-resident client through preferential tax treatment</li>
@@ -43,15 +43,15 @@
 					></iframe>
 					</div>
 
-					<p style="text-align:justify;margin-top:2em"> But let's now take a closer look on our charities! How can we distinguish between real charities and shell companies? We needed first to find these charities in the database. Since no detail was given in the set about the possible function of the different companies we needed external data.</p>
+					<p style="text-align:justify;margin-top:2em"> But let's now take a closer look on our charities! How can we distinguish between real charities and shell companies? We needed first to find these charities in the database. Since no detail was given in the set about the possible function of the different companies, we needed external data.</p>
 					
-					<p>We chose to use the Forbes Top 100 of charities, the list of main non-governmental organizations and the list of main charities on Wikipedia. We scraped these data in order to form a new database on well-known charities. By merging together these results we obtained detailed information on more than 300 charities that we could use to investigate the ICIJ database. Among these information we found the name of the charities, the name of principal leaders, the headquarters address and the location of principal offices. Note that the available data varies from charity to charity, resulting in a sometime sparse dataset.</p>
+					<p>We chose to use Forbes Magazine's list of the top 100 richest US charities, the list of main non-governmental organizations and the list of main charities on Wikipedia. We scraped this data in order to form a new database of well-known charities. By merging together these results we obtained detailed information on more than 300 charities that we could use to investigate the ICIJ database. Details about charities we found include the name of the charities, the name of its main leaders, the headquarters address and the location of major offices. Note that the available data varies from charity to charity, resulting in a sometime sparse dataset.</p>
 
-					<p>We decided to isolate potential charities by their name with comparison with our newly construct dataset by text mining. We took as charities the offshore companies that have a right amount of significative word in common with the charities name in our dataset. With this method we isolate a hundreds of matches.</p>
+					<p>We decided to isolate potential charities in the panama papers by their name to compare them with our newly constructed dataset of charities using text mining. We took as charities the offshore companies that have a certain percentage of significative words in common with the real charities. Using this method, we reduced the dataset from hundreds of thousands of nodes to a few hundred matches.</p>
 
-					<p>Considering the few number of matches and since human possess an expertise in natural language processing superior to any training tool, we inspected and corrected manually the potential matches.</p>
+					<p>Considering the small number of matches and since human possess an expertise in natural language processing superior to any training tool, we inspected and corrected the potential matches manually.</p>
 
-					<p>Among them, we found Amnesty Internationnal, the Red Cross and other world’s biggest aid agency. But as said sooner some shell companies were named after charities with which they had no connection. The law firm used these humanitarian organization as a cover when facing down demands for information from prying banks and financial institutions.</p>
+					<p>Among the matches, we found Amnesty International, the Red Cross and many other of the world's biggest aid agencies. But as said earlier, some shell companies were named after charities with which they had no connection.</p>
 				</div>
 			</div>
 		</div>
