@@ -261,16 +261,11 @@ a:focus {
     color: #fff;
     background: url(/img/about-bg.jpg) no-repeat bottom center scroll;
     background-color: {{ site.color.primary-dark }};
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 }
 
 .hunt {
-    display: table;
     width: 100%;
-    height: auto;
+    height: 50%;
     padding: 100px 0;
     text-align: center;
     color: #fff;
