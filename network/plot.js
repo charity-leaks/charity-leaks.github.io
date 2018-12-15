@@ -216,6 +216,7 @@ function selectableForceDirectedGraph() {
 		
         node = node.data(graph.nodes).enter().append("circle")
         .attr("r", 4)
+		.attr("fill", function(d) { return d.match == true ? "red" : "grey";})
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; })
         .on("dblclick", function(d) { d3.event.stopPropagation(); })
