@@ -14,7 +14,7 @@ function selectableForceDirectedGraph() {
     .attr("tabindex", 1)
     .on("keydown.brush", keydown)
     .on("keyup.brush", keyup)
-    .each(function() { this.focus(); })
+    //.each(function() { this.focus(); })
     .append("svg")
     .attr("width", width)
     .attr("height", height);
@@ -38,7 +38,7 @@ function selectableForceDirectedGraph() {
         vis.attr("transform",
                  "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")");
     }
-
+	
     var brusher = d3.svg.brush()
     //.x(d3.scale.identity().domain([0, width]))
     //.y(d3.scale.identity().domain([0, height]))
@@ -295,9 +295,9 @@ function selectableForceDirectedGraph() {
 
         console.log('d3.event', d3.event)
 
-        if (d3.event.keyCode == 67) {   //the 'c' key
-            center_view();
-        }
+        //if (d3.event.keyCode == 67) {   //the 'c' key
+        //    center_view();
+        //}
 
         if (shiftKey) {
             svg_graph.call(zoomer)
