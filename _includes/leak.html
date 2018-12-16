@@ -3,8 +3,8 @@
         <div class="leak">
 			<div class="container">
 				<div class="col-lg-8 col-lg-offset-2">
-					<h2>One Dataset to rule them all.</h2>
-					<p>The <a href="https://offshoreleaks.icij.org/pages/about"  target="_blank">databases</a> released by ICJC contain information on:</p>
+					<h2>One Dataset to rule them All.</h2>
+					<p>The <a href="https://offshoreleaks.icij.org/pages/about"  target="_blank">databases</a> released by ICIJ contain information on:</p>
 					
 					<ul style="text-align:justify;margin-bottom:2em">
 					<li><b>The Offshore Leaks</b>: 130 000 offshore accounts disclosed in a report (2013)</li>
@@ -13,28 +13,28 @@
 					<li><b>The Paradise Papers</b>: 13.4 millions electronic documents relating to offshore investments (2017)</li>
 					</ul>
 					
-					<p>This database is powered by <i>Neo4j</i>, a graph database that structures data in nodes and relationships. The <a href="https://offshoreleaks.icij.org/pages/database"  target="_blank">data</a> was downloaded as several CSV files, one for each actor and one for the link between them. The different nodes represent:</p>
+					<p>This database is powered by <i>Neo4j</i>, a graph database that structures data in nodes and edges. The <a href="https://offshoreleaks.icij.org/pages/database"  target="_blank">data</a> was downloaded as several CSV files, one for each actor type and one for the links between them. The different nodes represent:</p>
 					
 					<ul style="text-align:justify;margin-bottom:2em">
 					<li><b>The offshore entity</b>: a company created in a low-tax jurisdiction that often attracts non-resident client through preferential tax treatment</li>
-					<li><b>The officer</b>: a person or company who play a role in an offshore entity</li>
+					<li><b>The officer</b>: a person or company who plays a role in an offshore entity</li>
 					<li><b>The intermediary</b>: a go-between for someone seeking an offshore corporation and an offshore service provider (usually a law firm)</li>
-					<li><b>The address</b>: contact postal address as it appears in the original database</li>
+					<li><b>The address</b>: a contact postal address as it appears in the original database</li>
 					</ul>
 					
-					<p>In total, this database contains information about more than 785 000 offshore entities and links to people and companies in more than 200 countries. Note that these data come from leaked records and not a standardized corporate registry, so there may be duplicates (as similar appearances were not merged).</p>
+					<p>In total, this database contains information about more than 785 000 offshore entities and links to people and companies in more than 200 countries. Note that this data comes from leaked records and not a standardized corporate registry, so there may be duplicates (as similar appearances were not merged).</p>
 
-					<p>No cleaning or standardization were necessary (<a href="https://offshoreleaks.icij.org/pages/faq#transformations" target="_blank">see ICIJ site for more details</a>).</p>
+					<p>No cleaning or standardization was necessary (<a href="https://offshoreleaks.icij.org/pages/faq#transformations" target="_blank">see ICIJ site for more details</a>).</p>
 
-					<p>Before investigating among the charities, we can explore the dataset and the offshore companies to have a more general view of the situation. We were particularly interested in the Panamas Papers dataset. How were distributed the offshore companies around the world? How many countries sheltered these 200 000 companies?</p>
+					<p>Before investigating the charities, we can explore the dataset and the offshore companies to have a more general view of the situation. We were particularly interested in the Panamas Papers dataset. How were the offshore companies distributed around the world? How many countries sheltered these 200 000 companies?</p>
 
-					<p>We were not surprised to see that majority of our entities were localized in a small number of countries. Indeed, half of the countries quoted in the dataset contain only a few offshore companies.</p>
+					<p>We were not surprised to see that majority of our entities were located in a small number of countries. Indeed, half of the countries quoted in the dataset  put together contain only a few of the total number of offshore companies.</p>
 					
 					<img src="../img/bar.png" atl="Bar plot">
 					
-					<p style="margin-top:2em">Note the presence of the United Kingdom in the top 10; the UK is strongly appreciated by entrepreneurs and companies for his status of UK non-domicilied that enable to avoid taxes on foreign income.</p>
+					<p style="margin-top:2em">Note the presence of the United Kingdom in the top 10; the UK is strongly appreciated by entrepreneurs and companies for the possible UK non-domiciled status that enables actors to avoid taxes on foreign income.</p>
 
-					<p>In conclusion, there was no particular surprise with this top 20 since every members are well-known tax heavens leading to a non-uniform geographic distribution:</p>
+					<p>In conclusion, there was no particular surprise with this top 20, each country being a well-known tax haven. As a whole, this leads to a non-uniform geographic distribution.</p>
 					
 					<div align="center">
 					<iframe src="../img/panama_offshore_entities.html"
@@ -43,15 +43,15 @@
 					></iframe>
 					</div>
 
-					<p style="margin-top:2em"> But let's now take a closer look on our charities! We need first to find these charities in the database. Since no detail was given in the dataset about the different companies' functions, we need external data to help our investigation.</p>
+					<p style="margin-top:2em"> But now let's take a closer look at our charities! We need first to find them in the database. Since no detail was given in the dataset about the different companies' functions, we need external data to help our investigation.</p>
 					
-					<p>We chose to use <a href="https://www.forbes.com/sites/williampbarrett/2016/12/14/the-largest-u-s-charities-for-2016/#5ca92a8d4abb" target="_blank">Forbes Magazine's list of the top 100 richest US charities</a>, the list of <a href="https://en.wikipedia.org/wiki/International_non-governmental_organization" target="_blank">main non-governmental organizations</a> and the list of <a href="https://en.wikipedia.org/wiki/List_of_charitable_foundations" target="_blank">main charitable foundations</a> on Wikipedia. We scraped these websites in order to form a new dataset of well-known charities. By merging together these results we obtained detailed information on more than 300 charities that we could use to investigate the ICIJ database. Details about charities include the name of the charities, the name of its main leaders, the headquarters address and the location of major offices. Note that the available data varies from charities to charities, resulting in a sometime sparse dataset.</p>
+					<p>We chose to use <a href="https://www.forbes.com/sites/williampbarrett/2016/12/14/the-largest-u-s-charities-for-2016/#5ca92a8d4abb" target="_blank">Forbes Magazine's list of the top 100 richest US charities</a>, as well as Wikipedia's lists of <a href="https://en.wikipedia.org/wiki/International_non-governmental_organization" target="_blank">main non-governmental organizations</a> and <a href="https://en.wikipedia.org/wiki/List_of_charitable_foundations" target="_blank">main charitable foundations</a>. We scraped these websites in order to form a new dataset of well-known charities. By merging together these results, we obtained detailed information on more than 300 charities that we could use to investigate the ICIJ database. Collected details about charities include names, leaders, headquarters addresses and locations of major offices. Note that the available data varies from charity to charity, resulting in a sometimes sparse dataset.</p>
 
-					<p>We decided to isolate potential charities in the Panama Papers by their name. We considered an offshore company to be a charity when its name was closely related to one of the scraped charitable foundation name. This was achieved by text mining, where an algorithm matched them based on a percentage of common significative words. Using this method, we reduced the dataset from hundreds of thousands of entities to a few hundred names.</p>
+					<p>We decided to isolate potential charities in the Panama Papers by their name. We considered an offshore company to be a potential match for a charity when its name was closely related to that of one of the scraped charitable foundations. This was achieved by text mining, where our algorithm matched word sequences based on a percentage of common significative words. Using this method, we reduced the dataset from hundreds of thousands of entities to a few hundred names.</p>
 
-					<p>Considering the reasonnable number of matches and since Human possesses an expertise in natural language processing superior to any training tool, we inspected and corrected the potential matches manually.</p>
+					<p>Considering the reasonable number of matches and since humans possess an expertise in natural language processing superior to any training tool, we inspected and corrected the potential matches manually.</p>
 
-					<p>Among the matches, we found <i>Amnesty International</i>, the <i>International Red Cross</i>, and many other of the world's biggest aid agencies.</p>
+					<p>Among the matches, we found <i>Amnesty International</i>, the <i>International Red Cross</i>, and many others of the world's biggest aid agencies.</p>
 				</div>
 			</div>
 		</div>
