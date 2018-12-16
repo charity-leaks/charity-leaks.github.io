@@ -1,7 +1,7 @@
 function selectableForceDirectedGraph() {
-    var width = 1600,
+	var width = 800,
 
-    height = 1200,
+    height = 800,
     shiftKey, ctrlKey;
 
     var nodeGraph = null;
@@ -64,7 +64,7 @@ function selectableForceDirectedGraph() {
 
     var svg_graph = svg.append('svg:g')
     .call(zoomer)
-    //.call(brusher)
+    .call(brusher)
 
     var rect = svg_graph.append('svg:rect')
     .attr('width', width)
@@ -82,10 +82,10 @@ function selectableForceDirectedGraph() {
 
     var vis = svg_graph.append("svg:g");
 
-    vis.attr('fill', 'red')
-    .attr('stroke', 'black')
-    .attr('stroke-width', 1)
-    .attr('opacity', 0.5)
+    vis.attr('fill', 'white')
+    .attr('stroke', 'white')
+    .attr('stroke-width',1)
+    .attr('opacity', 0.8)
     .attr('id', 'vis')
 
 
@@ -178,13 +178,10 @@ function selectableForceDirectedGraph() {
         .attr("y1", function(d) { return d.source.y; })
         .attr("x2", function(d) { return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
-		
-
-
 
         var force = d3.layout.force()
-        .charge(-600)
-        .linkDistance(100)
+        .charge(-250)
+        .linkDistance(40)
         .nodes(graph.nodes)
         .links(graph.links)
         .size([width, height])
@@ -199,9 +196,11 @@ function selectableForceDirectedGraph() {
 		node.append("title")
         .text(function(d) { return d.name; });
 
-		myText.style("fill", "#0000ff")
-		.attr("width", "10")
-		.attr("height", "10")
+		myText.style("fill", "#FFFFFF")
+		.attr("x", 0)
+		.attr("dy", "-.9em")
+		.attr("font-size", "10px")
+		.attr("text-anchor", 'middle')
 		.text(function(d) { return d.name; });
 		
         function dragstarted(d) {
@@ -231,7 +230,7 @@ function selectableForceDirectedGraph() {
         }
 		
         node = node.data(graph.nodes).enter().append("circle")
-        .attr("r", 10)
+        .attr("r", 6)
 		.attr("fill", function(d) { return d.match == true ? "red" : "green";})
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; })
@@ -280,7 +279,13 @@ function selectableForceDirectedGraph() {
             else
                 return d.id; 
         });
-			  
+			
+		//node.append("svg:text")
+        //.attr("class", "nodetext")
+        //.attr("dx", 12)
+        //.attr("dy", ".35em")
+        //.text(function(d) { return d.name });
+			
     });
 
 

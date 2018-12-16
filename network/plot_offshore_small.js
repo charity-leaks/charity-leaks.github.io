@@ -165,7 +165,7 @@ function selectableForceDirectedGraph() {
 
     }
 
-    d3.json("graphs/graph_bahamas.json", function(error, graph) {
+    d3.json("graphs/graph_offshore_small.json", function(error, graph) {
         nodeGraph = graph;
 
         graph.links.forEach(function(d) {
