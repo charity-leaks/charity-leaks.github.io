@@ -14,7 +14,7 @@ function selectableForceDirectedGraph() {
     .attr("tabindex", 1)
     .on("keydown.brush", keydown)
     .on("keyup.brush", keyup)
-    .each(function() { this.focus(); })
+    //.each(function() { this.focus(); })
     .append("svg")
     .attr("width", width)
     .attr("height", height);
