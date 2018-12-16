@@ -21,6 +21,7 @@
 					<iframe src="../img/address_matches.html"
 					width="960px"
 					height="525px"
+					frameBorder="0"
 					></iframe>
 					</div>
 					
@@ -38,35 +39,58 @@
 					
 					<p>To get these graphs, we extracted every node corresponding to a matched entity and its associated edges. The actors at the other end of these edges were extracted as well. With these data we could represent the first level connections for every entity in a form of a network and see the degree of interconnectivity between the matches. </p>
 					
-
+					<div align="center">
+					<iframe class="special"
+					src="../network/network_panama.html"
+					width=130%
+					height="820px"
+					frameBorder="0"
+					></iframe>
+					</div>
 					
-					GRAPH PANAMA
-					
-					<p>This graph is already very interesting to look at. About half of all the charity nodes (in yellow) are somehow connected to another charity node, which is a lot for a dataset containing over 200'000 nodes. This confirms our suspicions from above that there must be intermediaries who either specialize in charities
+					<p>This graph is already very interesting to look at. About half of all the charity nodes (in red) are somehow connected to another charity node, which is a lot for a dataset containing over 200'000 nodes. This confirms our suspicions from above that there must be intermediaries who either specialize in charities
 					, or are in the habit of using their names. A closer look shows us some familiar names, such as the World Wildlife Fund and UNICEF, connected through the Tarbes Trust.</p>
 					
 					
 					<p> The original graph for the paradise matches is much too large for us to comfortably display, so we filter it down, removing any non-charity nodes that are only connected to one other node (and therefore aren't connecting anyone).</p>
 					
-					GRAPH PARADISE2
+					<div align="center">
+					<iframe class="special"
+					src="../network/network_paradise_small.html"
+					width=130%
+					height="820px"
+					frameBorder="0"
+					></iframe>
+					</div>
 					
 					<p>We now have a much clearer image of the connecting nodes, and we notice several things. First, UNICEF and the World Wildlife Fund are back, but this time they are connected to the "Internation Red Cross",
 					which the real Red Cross insists is a fake : <a href="https://www.icrc.org/en/document/misuse-icrcs-identity-panama-papers"  target="_blank">Misuse of ICRC identity</a>.
 					This is a strong argument for UNICEF and the World Wildlife Fund also being stolen names (same thing for the Cancer society, which is also in this cluster).
-					Notably, this cluster is not the only place where the "International Red Cross" shows up, suggesting multiple different nodes have this name, which reinforces the idea that the name is stolen. In the second, smaller cluster, we also find Amnesty International, which therefore can also be considered a victim of name theft. We can thus disclaim now Amnesty Internationnal and The Cancer Sociery that were suspected through our first analysis above. </p>
+					Notably, this cluster is not the only place where the "International Red Cross" shows up, suggesting multiple different nodes have this name, which reinforces the idea that the name is stolen. In the second, smaller cluster, we also find Amnesty International, which therefore can also be considered a victim of name theft. We can thus disclaim now Amnesty Internationnal and The Cancer Sociery that were suspected through our first analysis above.</p>
 					
-					GRAPH OFFSHORE 
+					<div align="center">
+					<iframe class="special"
+					src="../network/network_offshore_small.html"
+					width=130%
+					height="820px"
+					frameBorder="0"
+					></iframe>
+					</div>
 					
 					<p>This graph is also very nice. We find again the "International Red Cross" and "Amnesty International" (and also "UNICEF"!), this time connected through a different intermediary. Clearly, there is more than one company out there ripping off the names of famous charities.</p>
 					
-					GRAPH BAHAMAS
+					<div align="center">
+					<iframe class="special"
+					src="../network/network_bahamas.html"
+					width=130%
+					height="820px"
+					frameBorder="0"
+					></iframe>
+					</div>
 					
-					<p>While they lack the big charity names of the previous leaks, the bahamas papers nevertheless contain some information that is particularly relevant in Switzerland. Indeed, there is a cluster of three charities, United Way, Sandy and East Meets West, where the central nodes is...Credit Suisse, 
-					the second largest bank in Switzerland. A bit of research tells us that this is probably the real bank: Credit Suisse is listed as the third largest faciliator for offshore accounts in the Pana-ma Papers, and together with UBS is responsible for one in ten of all trusts leaked in the Baha-mas Papers. 
-					<a href="https://www.swissinfo.ch/eng/streamlining-_credit-suisse-to-close-panama-private-banking-office/42192864"  target="_blank">Credit Suisse</a>.
-					Our conclusion to this research is therefore the following: always do some research before do-nating to charities, and also before opening a bank account!
-
+					<p>While they lack the big charity names of the previous leaks, the bahamas papers nevertheless contain some information that is particularly relevant in Switzerland. Indeed, there is a cluster of three charities, United Way, Sandy and East Meets West, where the central nodes is <i>Credit Suisse</i>, the second largest bank in Switzerland. A bit of research tells us that this is probably the real bank; <a href="https://www.swissinfo.ch/eng/streamlining-_credit-suisse-to-close-panama-private-banking-office/42192864" target="_blank"><i>Credit Suisse</i></a> is listed as the third largest faciliator for offshore accounts in the Panama Papers, and together with <i>UBS</i> is responsible for one in ten of all trusts leaked in the Bahamas Papers.</p>
 					
+					<!--<p>Our conclusion to this research is therefore the following: always do some research before donating to charities, and also before opening a bank account!</p>-->
 					
 				</div>
 			</div>
