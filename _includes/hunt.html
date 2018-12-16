@@ -33,7 +33,7 @@
 
 					<p>On a lighter note, the <a href="https://en.wikipedia.org/wiki/American_Cancer_Society" target="_blank">American Cancer Society</a> appears not to be a match. Indeed, its headquarters are located in Atlanta, <i>Georgia</i>, but the shell company with the same name is registered in <i>Michigan</i>, a state that also has a small town named <a href="https://en.wikipedia.org/wiki/Atlanta,_Michigan" target="_blank">Atlanta</a>. Clearly whoever set up this shell has a sense of humor.</p>
 					
-					<p>These results show that our first investigation method was relatively relevant (<i>Sherlock Holmes would have been proud</i>). We did not find any signs of fraud for most of the members of our list, but a lot of articles turned up to document the presence of Amnesty International in the leaks. In these articles, <i>Amnesty International</i> denies being implicated and denounces the use of its name. Because of the lack of data on the implication of the other charities, we choose to keep these suspects in custody while proceeding to the second part of our analysis.</p>
+					<p>These results show that our first investigation method was relatively relevant. We did not find any signs of fraud for most of the members of our list, but a lot of articles turned up to document the presence of Amnesty International in the leaks. In these articles, <i>Amnesty International</i> denies being implicated and denounces the use of its name. Because of the lack of data on the implication of the other charities, we choose to keep these suspects in custody while proceeding to the second part of our analysis.</p>
 
 					<h4>Who do you hang with? </h4>
 					<p>We chose to evaluate the first-level connections of our matches in order to detect clusters. Indeed, intermediaries are crucial for an offshore service provider, handling the set-up and administration of the shell companies. If several suspected charities are all connected by a single intermediary, it could mean that said intermediary is specialized in charities. But if one of the connected entities is clearly a fake, there is also a high probability than its neighbours are fake too. In this case, it would mean that the given intermediary is in the habit of stealing charity names for its shell companies.</p>
@@ -53,10 +53,10 @@
 					<button style="background-color:#555555"; onclick="var ifr=document.getElementsByName('panama')[0]; ifr.src=ifr.src;">Refresh Panama Network</button>
 					</div>
 					
-					<p style="margin-top:2em">This graph is already very interesting to look at. About half of all the charity nodes (in red) are somehow connected to another charity node, which is a lot for a dataset containing over 200'000 nodes. This confirms our suspicions from above that there must be intermediaries who either specialize in charities, or are in the habit of using their names. A closer look shows us some familiar names, such as the World Wildlife Fund and UNICEF, connected through the Tarbes Trust.</p>
+					<p style="margin-top:2em">This graph is already very interesting to look at. About half of all the charity nodes (in red) are somehow connected to another charity node, which is a lot for a dataset containing over 200'000 nodes. This confirms our suspicions from above that there must be intermediaries who either specialize in charities, or are in the habit of using their names. A closer look shows us some familiar names, such as the <i>World Wildlife Fund</i> and <i>UNICEF</i>, connected through the <i>Tarbes Trust</i>.</p>
 					
 <h5> The paradise papers:</h5>
-					<p> The original graph for the paradise matches is much too large for us to comfortably display, so we filtered it down, removing any non-charity nodes that are only connected to one other node (and therefore aren't connecting anyone).</p>
+					<p> The original graph for the Paradise Papers' matches is much too large for us to comfortably display, so we filtered it down, removing any non-charity nodes that are only connected to one other node (and therefore aren't connecting anyone).</p>
 					
 					<div align="center">
 					<iframe class="special"
@@ -69,10 +69,7 @@
 					<button style="background-color:#555555"; onclick="var ifr=document.getElementsByName('paradise')[0]; ifr.src=ifr.src;">Refresh Paradise Network</button>
 					</div>
 					
-					<p style="margin-top:2em">We now have a much clearer image of the connecting nodes, and we notice several things. First, UNICEF and the World Wildlife Fund are back, but this time they are connected to the "Internation Red Cross",
-					which the real Red Cross insists is a fake : <a href="https://www.icrc.org/en/document/misuse-icrcs-identity-panama-papers"  target="_blank">Misuse of ICRC identity</a>.
-					This is a strong argument for UNICEF and the World Wildlife Fund also being stolen names (same thing for the Cancer society, which is also in this cluster).
-					Notably, this cluster is not the only place where the "International Red Cross" shows up, suggesting multiple different nodes have this name, which reinforces the idea that the name is stolen. In the second, smaller cluster, we also find Amnesty International, which therefore can also be considered a victim of name theft. We can thus claim with high probability that Amnesty Internationnal and The Cancer Society are indeed innocent in this respect.</p>
+					<p style="margin-top:2em">We now have a much clearer image of the connecting nodes, and we notice several things. First, <i>UNICEF</i> and the <i>World Wildlife Fund</i> are back, but this time they are connected to the "<i>Internation Red Cross</i>", which the real Red Cross insists is a fake (<a href="https://www.icrc.org/en/document/misuse-icrcs-identity-panama-papers"  target="_blank">Misuse of ICRC identity</a>). This is a strong argument for <i>UNICEF</i> and the <i>World Wildlife Fund</i> also being stolen names (same thing for the <i>Cancer society</i>, which is also in this cluster). Notably, this cluster is not the only place where the "<i>International Red Cross<i>" shows up, suggesting multiple different nodes have this name, which reinforces the idea that the name is stolen. In the second, smaller cluster, we also find <i>Amnesty International</i>, which therefore can also be considered a victim of name theft. We can thus claim with high probability that <i>Amnesty Internationnal</i> and <i>The Cancer Society</i> are indeed innocent in this respect.</p>
 
 <h5> The offshore leaks:</h5>
 					
@@ -87,7 +84,7 @@
 					<button style="background-color:#555555"; onclick="var ifr=document.getElementsByName('offshore')[0]; ifr.src=ifr.src;">Refresh Offshore Network</button>
 					</div>
 					
-					<p style="margin-top:2em">This graph is also very nice. We find again the "International Red Cross" and "Amnesty International" (and also "UNICEF"!), this time connected through a different intermediary. Clearly, there is more than one company out there ripping off the names of famous charities.</p>
+					<p style="margin-top:2em">This graph is also very nice. We find again the "<i>International Red Cross</i>" and "<i>Amnesty International</i>" (and also "<i>UNICEF</i>"!), this time connected through a different intermediary. Clearly, there is more than one company out there ripping off the names of famous charities.</p>
 					
 <h5> The Bahamas leaks:</h5>
 
@@ -103,7 +100,7 @@
 					</div>
 					
 
-					<p style="margin-top:2em">While they lack the big charity names of the previous leaks, the Bahamas papers nevertheless contain some information that is particularly relevant in Switzerland. Indeed, there is a cluster of three charities, United Way, Sandy and East Meets West, where the central nodes is <i>Credit Suisse</i>, the second largest bank in Switzerland. A bit of research tells us that this is probably the real bank; <a href="https://www.swissinfo.ch/eng/streamlining-_credit-suisse-to-close-panama-private-banking-office/42192864" target="_blank"><i>Credit Suisse</i></a> is listed as the third largest faciliator for offshore accounts in the Panama Papers, and together with <i>UBS</i> is responsible for one in ten of all trusts leaked in the Bahamas Papers.</p>
+					<p style="margin-top:2em">While they lack the big charity names of the previous leaks, the Bahamas Papers nevertheless contain some information that is particularly relevant in Switzerland. Indeed, there is a cluster of three charities, <i>United Way</i>, <i>Sandy</i>, and <i>East Meets West</i>, where the central nodes is <i>Credit Suisse</i>, the second largest bank in Switzerland. A bit of research tells us that this is probably the real bank; <a href="https://www.swissinfo.ch/eng/streamlining-_credit-suisse-to-close-panama-private-banking-office/42192864" target="_blank"><i>Credit Suisse</i></a> is listed as the third largest faciliator for offshore accounts in the Panama Papers, and together with <i>UBS</i> is responsible for one in ten of all trusts leaked in the Bahamas Papers.</p>
 					
 					<!--<p>Our conclusion to this research is therefore the following: always do some research before donating to charities, and also before opening a bank account!</p>-->
 					
