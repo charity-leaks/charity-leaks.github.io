@@ -38,9 +38,11 @@
 					<h4>Who do you hang with? </h4>
 					<p>We chose to evaluate the first-level connections of our matches in order to detect clusters. Indeed, intermediaries are crucial for an offshore service provider, handling the set-up and administration of the shell companies. If several suspected charities are all connected by a single intermediary, it could mean that said intermediary is specialized in charities. But if one of the connected entities is clearly a fake, there is also a high probability than its neighbours are fake too. In this case, it would mean that the given intermediary is in the habit of stealing charity names for its shell companies.</p>
 					
-					<p>To get these graphs, we extracted every node corresponding to a matched entity and its associated edges. The actors at the other end of these edges were extracted as well. With this data, we could represent the first level connections for every entity in the form of a network and see the degree of interconnectivity between the matches. </p>
+					<p>To get these graphs, we extracted every node corresponding to a matched entity and its associated edges. The actors at the other end of these edges were extracted as well. With this data, we could represent the first level connections for every entity in the form of a network and see the degree of interconnectivity between the matches.</p>
 
-<h5> The panama papers:</h5>
+					<p>The following networks are user-interactive and each nodes can be dragged around. By pressing down the SHIFT key, multiple nodes can be selected and moved together at once. A button under each network allows to refresh and shuffle around all the nodes.</p>
+
+<h5 style="margin-top:4em"> The panama papers:</h5>
 					
 					<div align="center">
 					<iframe class="special"
@@ -55,7 +57,7 @@
 					
 					<p style="margin-top:2em">This graph is already very interesting to look at. About half of all the charity nodes (in red) are somehow connected to another charity node, which is a lot for a dataset containing over 200'000 nodes. This confirms our suspicions from above that there must be intermediaries who either specialize in charities, or are in the habit of using their names. A closer look shows us some familiar names, such as the <i>World Wildlife Fund</i> and <i>UNICEF</i>, connected through the <i>Tarbes Trust</i>.</p>
 					
-<h5> The paradise papers:</h5>
+<h5 style="margin-top:4em"> The paradise papers:</h5>
 					<p> The original graph for the Paradise Papers' matches is much too large for us to comfortably display, so we filtered it down, removing any non-charity nodes that are only connected to one other node (and therefore aren't connecting anyone).</p>
 					
 					<div align="center">
@@ -71,7 +73,7 @@
 					
 					<p style="margin-top:2em">We now have a much clearer image of the connecting nodes, and we notice several things. First, <i>UNICEF</i> and the <i>World Wildlife Fund</i> are back, but this time they are connected to the "<i>Internation Red Cross</i>", which the real Red Cross insists is a fake (<a href="https://www.icrc.org/en/document/misuse-icrcs-identity-panama-papers"  target="_blank">Misuse of ICRC identity</a>). This is a strong argument for <i>UNICEF</i> and the <i>World Wildlife Fund</i> also being stolen names (same thing for the <i>Cancer society</i>, which is also in this cluster). Notably, this cluster is not the only place where the "<i>International Red Cross</i>" shows up, suggesting multiple different nodes have this name, which reinforces the idea that the name is stolen. In the second, smaller cluster, we also find <i>Amnesty International</i>, which therefore can also be considered a victim of name theft. We can thus claim with high probability that <i>Amnesty Internationnal</i> and <i>The Cancer Society</i> are indeed innocent in this respect.</p>
 
-<h5> The offshore leaks:</h5>
+<h5 style="margin-top:4em"> The offshore leaks:</h5>
 					
 					<div align="center">
 					<iframe class="special"
@@ -84,9 +86,9 @@
 					<button style="background-color:#555555"; onclick="var ifr=document.getElementsByName('offshore')[0]; ifr.src=ifr.src;">Refresh Offshore Network</button>
 					</div>
 					
-					<p style="margin-top:2em">This graph is also very nice. We find again the "<i>International Red Cross</i>" and "<i>Amnesty International</i>" (and also "<i>UNICEF</i>"!), this time connected through a different intermediary. Clearly, there is more than one company out there ripping off the names of famous charities.</p>
+					<p style="margin-top:2em">This network is also very interesting. We find again the "<i>International Red Cross</i>" and "<i>Amnesty International</i>" (and also "<i>UNICEF</i>"!), this time connected through a different intermediary. Clearly, there is more than one company out there ripping off the names of famous charities.</p>
 					
-<h5> The Bahamas leaks:</h5>
+<h5 style="margin-top:4em"> The Bahamas leaks:</h5>
 
 					<div align="center">
 					<iframe class="special"
