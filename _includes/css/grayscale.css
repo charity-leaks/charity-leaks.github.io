@@ -296,9 +296,10 @@ a:focus {
 
 .authors {
     width: 100%;
-    padding: 50px 0;
+	height: auto;
+    padding: 150px 0;
     color: #fff;
-    background: url(/img/authors-bg.jpg) no-repeat center center scroll;
+    background: url(/img/hammer-color.jpg) no-repeat center center scroll;
     background-color: {{ site.color.primary-dark }};
     -webkit-background-size: cover;
     -moz-background-size: cover;
