@@ -27,16 +27,16 @@ function selectableForceDirectedGraph() {
         on("zoom", redraw);
 
     function zoomstart() {
-        node.each(function(d) {
+        /*node.each(function(d) {
             d.selected = false;
             d.previouslySelected = false;
         });
-        node.classed("selected", false);
+        node.classed("selected", false);*/
     }
 
     function redraw() {
-        vis.attr("transform",
-                 "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")");
+		/*vis.attr("transform",
+                 "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")");*/
     }
 
     var brusher = d3.svg.brush()
@@ -295,9 +295,9 @@ function selectableForceDirectedGraph() {
 
         console.log('d3.event', d3.event)
 
-        if (d3.event.keyCode == 67) {   //the 'c' key
-            center_view();
-        }
+        //if (d3.event.keyCode == 67) {   //the 'c' key
+        //    center_view();
+        //}
 
         if (shiftKey) {
             svg_graph.call(zoomer)
