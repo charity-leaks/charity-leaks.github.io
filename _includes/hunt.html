@@ -4,18 +4,17 @@
 			<div class="container">
 				<div class="col-lg-8 col-lg-offset-2">
 					<h2>Fishing for rich villains</h2>
-					<p>How can we find out if an entity is an actual charity, and not some other shell corporation with a stolen name? </p>
+					<p>Once we had our potential matches, we were faced with the following question: how can we find out if an entity is an actual charity, and not some random shell corporation with a stolen name? </p>
 					<h4>Checking the directory...</h4>
 					<p>After investigating several methods, we finally chose to check the addresses of the matches we had. By definition, a shell company is a corporation that exists only on paper and has no office and no employees, but may have a bank account, and also needs a mailbox address. It could therefore be assumed that if a real charity’s headquarters match the mail address of a shell with the same name, these are indeed one and the same company.</p>
 					
 					<p>In the database provided by ICIJ, the majority of the offshore entities have an address registered as a specific node (<a href="https://offshoreleaks.icij.org/nodes/80135846" target="_blank">see example here</a>). 
-					We decided to inspect these addresses for our matches and to compare them with the headquarters addresses of the corresponding charities that were found during the web scraping. If the addresses match, there is a high probability that the offshore accounts do indeed belong to the real charity.<p>
+					We decided to inspect these addresses for our matches and then to compare them with the headquarters addresses of the corresponding charities that were found during the web scraping. If the addresses match, there is a high probability that the offshore accounts do indeed belong to the real charity.<p>
 					
-					<p>After extracting every nodes with a registered address corresponding to a match we obtained a list of 27 offshore entities. Among them, we discarded every match whose 
-					charity headquarter location was not available in our data. We also removed the entities with an address registered in a Tax Heaven (Barbados, Aruba, Caraïb Islands) 
-					when their corresponding charities were located in a different country.</p>
+					<p>After extracting every node with a registered address corresponding to a match, we obtained a list of 27 offshore entities. Among them, we discarded every match whose 
+					charity headquarter location was not available in our data. We also removed the entities with an address registered in the country of origin of the leak (the Bahamas, Aruba, etc...).</p>
 					
-					<p>We obtained 11 suspected matches, a dataset small enough for manual inspection. Reading though, we kept only the entities where the countries of the two addresses matched. Some matches are more relevant than other since the town corresponds whereas for other we only have the country.</p>
+					<p>We obtained 11 suspected matches, a dataset small enough for manual inspection. Reading though, we kept only the entities where the countries of the two addresses matched. Some matches are more relevant than the others since the town corresponds, whereas for most, we only have the country.</p>
 					
 					<div align="center">
 					<iframe src="../img/address_matches.html"
@@ -25,19 +24,23 @@
 					></iframe>
 					</div>
 					
-					<p style="margin-top:2em">In this final list, we found the names of famous charities such as <i>Amnesty International</i>, <i>The Nature Conservancy</i>, <i>World Vision</i>, and <i>The American Cancer Society</i>. It is interesting to note that some charities appear two times in our list (<i>The Nature Conservancy</i> and <i>Memorial Cancer Center</i>) with different addresses. Each of these companies is therefore a suspect.</p>
+					<p style="margin-top:2em">In this final list, we found the names of famous charities such as <i>Amnesty International</i>, <i>The Nature Conservancy</i>, <i>World Vision</i>, and <i>The American Cancer Society</i>. It is interesting to note that some charities appear two times in our list (<i>The Nature Conservancy</i> and <i>Memorial Sloane-Kettering Cancer Center</i>) with different addresses. Each of these companies is therefore a suspect. (The fact that most of our matches are located in the United States, however, should be treated with caution, as during our web scraping, the charities taken from the Forbes article were much more likely to have addresses than the ones from wikipedia, and all of the former are US-American.)</p>
 
-					<p>We searched the web for these companies associated with their specific leak source. It seems that the common good is not the main objective of every charity. Indeed, we found that <i>The Nature Conservancy</i>, one of the biggest environmental group, was not using the donations for his environmental mission but for investing 
+					<p>We searched the web for these companies associated with their specific leak source. It seems that the common good is not the main objective of every charity. Indeed, we found that <i>The Nature Conservancy</i>, one of the world's biggest environmental groups, was revealed not to be using all its donations for its environmental mission but instead investing 
 					in oil drilling. <br>(<a href="https://www.nbcwashington.com/investigations/Paradise-Papers-Secret-Documents-Reveal-Environmental-Groups-Invest-in-Oil-Drilling-482607881.html">Environmental Groups invest in Oil Driling</a>)</br> </p>
 					
-					<p>Same for <i>The Duke Endowment</i> where we found that Duke university uses offshore founds to grow their endowments investing in fossil fuels. <br>(<a href=" https://www.theguardian.com/news/2017/nov/08/us-universities-offshore-funds-endowments-fossil-fuels-paradise-papers ">US universities use offshore funds to grow their huge endowments</a>)</br></p>
+					<p>Same for <i>The Duke Endowment</i> where we found that Duke University uses offshore funds to grow their endowments by investing in fossil fuels. <br>(<a href=" https://www.theguardian.com/news/2017/nov/08/us-universities-offshore-funds-endowments-fossil-fuels-paradise-papers ">US universities use offshore funds to grow their huge endowments</a>)</br></p>
+
+					<p>On a lighter note, the <a href="https://en.wikipedia.org/wiki/American_Cancer_Society" target="_blank">American Cancer Society</a> appears not to be a match. Indeed, its headquarters are located in Atlanta, <i>Georgia</i>, but the shell company with the same name is registered in <i>Michigan</i>, a state that also has a small town named <a href="https://en.wikipedia.org/wiki/Atlanta,_Michigan" target="_blank">Atlanta</a>. Clearly whoever set up this shell has a sense of humor.</p>
 					
-					<p>These results show that our first investigation method was relevant (<i>Sherlock Holmes would have been proud</i>). We did not find any signs of fraud for the other members of our list but a lot of articles on the presnce of Amnesty International in the leaks. In these articles, <i>Amnesty International</i> denied being implicated and denounced the use of his name. Despite these article or the lack of data on the implication of these charities, we choose to keep these suspects it in custody while proceeding to the second part of our analysis.</p>
+					<p>These results show that our first investigation method was relatively relevant (<i>Sherlock Holmes would have been proud</i>). We did not find any signs of fraud for most of the members of our list, but a lot of articles turned up to document the presence of Amnesty International in the leaks. In these articles, <i>Amnesty International</i> denies being implicated and denounces the use of its name. Because of the lack of data on the implication of the other charities, we choose to keep these suspects in custody while proceeding to the second part of our analysis.</p>
 
 					<h4>Who do you hang with? </h4>
-					<p>We chose to evaluate the first-level connections of our matches in order to detect clusters. Indeed, intermediaries are crucial for an offshore service provider, handling the administration of the shell companies. If several suspected charities are all connected by a single intermediary, it could mean that said intermediary is specialized in charities. But if one of the connected entities is clearly a fake, there is a high probability than its neighbours are fake too. In this case, it would mean that the given intermediary is in the habit of stealing charity names for its shell companies.</p>
+					<p>We chose to evaluate the first-level connections of our matches in order to detect clusters. Indeed, intermediaries are crucial for an offshore service provider, handling the set-up and administration of the shell companies. If several suspected charities are all connected by a single intermediary, it could mean that said intermediary is specialized in charities. But if one of the connected entities is clearly a fake, there is also a high probability than its neighbours are fake too. In this case, it would mean that the given intermediary is in the habit of stealing charity names for its shell companies.</p>
 					
-					<p>To get these graphs, we extracted every node corresponding to a matched entity and its associated edges. The actors at the other end of these edges were extracted as well. With these data we could represent the first level connections for every entity in a form of a network and see the degree of interconnectivity between the matches. </p>
+					<p>To get these graphs, we extracted every node corresponding to a matched entity and its associated edges. The actors at the other end of these edges were extracted as well. With this data, we could represent the first level connections for every entity in the form of a network and see the degree of interconnectivity between the matches. </p>
+
+<h5> The panama papers:</h5>
 					
 					<div align="center">
 					<iframe class="special"
@@ -51,8 +54,8 @@
 					<p>This graph is already very interesting to look at. About half of all the charity nodes (in red) are somehow connected to another charity node, which is a lot for a dataset containing over 200'000 nodes. This confirms our suspicions from above that there must be intermediaries who either specialize in charities
 					, or are in the habit of using their names. A closer look shows us some familiar names, such as the World Wildlife Fund and UNICEF, connected through the Tarbes Trust.</p>
 					
-					
-					<p> The original graph for the paradise matches is much too large for us to comfortably display, so we filter it down, removing any non-charity nodes that are only connected to one other node (and therefore aren't connecting anyone).</p>
+<h5> The paradise papers:</h5>
+					<p> The original graph for the paradise matches is much too large for us to comfortably display, so we filtered it down, removing any non-charity nodes that are only connected to one other node (and therefore aren't connecting anyone).</p>
 					
 					<div align="center">
 					<iframe class="special"
@@ -66,7 +69,9 @@
 					<p>We now have a much clearer image of the connecting nodes, and we notice several things. First, UNICEF and the World Wildlife Fund are back, but this time they are connected to the "Internation Red Cross",
 					which the real Red Cross insists is a fake : <a href="https://www.icrc.org/en/document/misuse-icrcs-identity-panama-papers"  target="_blank">Misuse of ICRC identity</a>.
 					This is a strong argument for UNICEF and the World Wildlife Fund also being stolen names (same thing for the Cancer society, which is also in this cluster).
-					Notably, this cluster is not the only place where the "International Red Cross" shows up, suggesting multiple different nodes have this name, which reinforces the idea that the name is stolen. In the second, smaller cluster, we also find Amnesty International, which therefore can also be considered a victim of name theft. We can thus disclaim now Amnesty Internationnal and The Cancer Sociery that were suspected through our first analysis above.</p>
+					Notably, this cluster is not the only place where the "International Red Cross" shows up, suggesting multiple different nodes have this name, which reinforces the idea that the name is stolen. In the second, smaller cluster, we also find Amnesty International, which therefore can also be considered a victim of name theft. We can thus claim with high probability that Amnesty Internationnal and The Cancer Sociery are indeed innocent in this respect.</p>
+
+<h5> The offshore leaks:</h5>
 					
 					<div align="center">
 					<iframe class="special"
@@ -79,6 +84,7 @@
 					
 					<p>This graph is also very nice. We find again the "International Red Cross" and "Amnesty International" (and also "UNICEF"!), this time connected through a different intermediary. Clearly, there is more than one company out there ripping off the names of famous charities.</p>
 					
+<h5> The bahamas leaks:</h5>
 					<div align="center">
 					<iframe class="special"
 					src="../network/network_bahamas.html"
@@ -88,7 +94,7 @@
 					></iframe>
 					</div>
 					
-					<p>While they lack the big charity names of the previous leaks, the bahamas papers nevertheless contain some information that is particularly relevant in Switzerland. Indeed, there is a cluster of three charities, United Way, Sandy and East Meets West, where the central nodes is <i>Credit Suisse</i>, the second largest bank in Switzerland. A bit of research tells us that this is probably the real bank; <a href="https://www.swissinfo.ch/eng/streamlining-_credit-suisse-to-close-panama-private-banking-office/42192864" target="_blank"><i>Credit Suisse</i></a> is listed as the third largest faciliator for offshore accounts in the Panama Papers, and together with <i>UBS</i> is responsible for one in ten of all trusts leaked in the Bahamas Papers.</p>
+					<p>While they lack the big charity names of the previous leaks, the Bahamas papers nevertheless contain some information that is particularly relevant in Switzerland. Indeed, there is a cluster of three charities, United Way, Sandy and East Meets West, where the central nodes is <i>Credit Suisse</i>, the second largest bank in Switzerland. A bit of research tells us that this is probably the real bank; <a href="https://www.swissinfo.ch/eng/streamlining-_credit-suisse-to-close-panama-private-banking-office/42192864" target="_blank"><i>Credit Suisse</i></a> is listed as the third largest faciliator for offshore accounts in the Panama Papers, and together with <i>UBS</i> is responsible for one in ten of all trusts leaked in the Bahamas Papers.</p>
 					
 					<!--<p>Our conclusion to this research is therefore the following: always do some research before donating to charities, and also before opening a bank account!</p>-->
 					
